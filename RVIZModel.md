@@ -15,7 +15,7 @@ The mesh files were separated into individual robot links, and the joint pivot c
 in **Gazebo**.
 Since the original STL files were not directly prepared for ROS simulation, additional work was required to define the correct link structure, joint origins, joint axes, and coordinate
 alignment in the URDF.
-Finally, the model successfully loads in RViz, and all joints can be moved using joint_state_publisher_gui.
+Finally, the model successfully loads in RViz, and all joints can be moved using "joint_state_publisher_gui".
 
 **Simulation Preview**
 
