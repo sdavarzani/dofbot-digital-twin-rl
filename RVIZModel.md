@@ -18,5 +18,6 @@ alignment in the URDF.
 Finally, the model successfully loads in RViz, and all joints can be moved using joint_state_publisher_gui.
 
 **Simulation Preview**
+
 Here is the simulation in RViz:
 <img width="1920" height="1080" alt="photo_5927183541865221809_w" src="https://github.com/user-attachments/assets/733d57a7-2a6a-4ea6-93ab-1d9034b91d84" />
