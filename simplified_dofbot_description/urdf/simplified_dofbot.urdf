@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<robot name="simplified_dofbot">
+
+  <!-- Materials -->
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+  <material name="gray">
+    <color rgba="0.6 0.6 0.6 1"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
+
+  <!-- World -->
+  <link name="world"/>
+
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Base -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://simplified_dofbot_description/meshes/Base_Group.stl"
+              scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <!-- First arm -->
+  <link name="first_arm_link">
+    <visual>
+      <!-- Negative of Joint 1 absolute pivot -->
+      <origin xyz="-0.046779 -0.122519 -0.115472" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://simplified_dofbot_description/meshes/First_Arm.stl"
+              scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <!-- Second arm -->
+  <link name="second_arm_link">
+    <visual>
+      <!-- Negative of Joint 2 absolute pivot -->
+      <origin xyz="-0.137228 -0.242982 -0.103432" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://simplified_dofbot_description/meshes/Secound_Arm.stl"
+              scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <!-- Wrist -->
+  <link name="wrist_link">
+    <visual>
+      <!-- Negative of Joint 3 absolute pivot -->
+      <origin xyz="-0.198824 -0.171340 -0.100019" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://simplified_dofbot_description/meshes/Wrist.stl"
+              scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <!-- Gripper -->
+  <link name="gripper_link">
+    <visual>
+      <!-- Negative of Joint 4 absolute pivot -->
+      <origin xyz="-0.202800 -0.155741 -0.124683" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://simplified_dofbot_description/meshes/Gripper.stl"
+              scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <!-- Joint 1 -->
+  <joint name="joint1" type="revolute">
+    <parent link="base_link"/>
+    <child link="first_arm_link"/>
+    <origin xyz="0.046779 0.122519 0.115472" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- Joint 2 -->
+  <joint name="joint2" type="revolute">
+    <parent link="first_arm_link"/>
+    <child link="second_arm_link"/>
+    <origin xyz="0.090449 0.120463 -0.012040" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- Joint 3-->
+  <joint name="joint3" type="revolute">
+    <parent link="second_arm_link"/>
+    <child link="wrist_link"/>
+    <origin xyz="0.061596 -0.071642 -0.003413" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- Joint 4 -->
+  <joint name="joint4" type="revolute">
+    <parent link="wrist_link"/>
+    <child link="gripper_link"/>
+    <origin xyz="0.003976 -0.015599 0.024664" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+  </joint>
+
+</robot>
