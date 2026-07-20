@@ -1,0 +1,28 @@
+# DOFBOT Digital Twin and Deep Reinforcement Learning
+
+## Project Overview
+
+This project focuses on developing a digital twin of a customized DOFBOT-style robotic arm using ROS Noetic, RViz, and Gazebo 11.
+
+The robotic arm uses a spoon as its end effector and is being developed for an assistive feeding task. The intended task is for the robot to move the spoon toward a bowl, enter the bowl, simulate scooping, lift the spoon while maintaining a suitable orientation, and move toward a feeding target.
+
+The project is inspired by research on digital-twin-driven robotic control using machine vision and deep reinforcement learning. The long-term objective is to create a closed-loop system that combines:
+
+- Robot simulation and digital-twin modeling
+- Continuous joint control
+- Environment perception
+- Deep reinforcement learning
+- Simulation-to-real-world transfer
+
+## Project Goals
+
+- Build an accurate digital model of the robotic arm and its environment.
+- Create a valid URDF model containing the robot links, joints, limits, and coordinate frames.
+- Verify the robot kinematic structure and joint motion in RViz.
+- Transition the robot model from RViz visualization to Gazebo physics simulation.
+- Add mass, inertia, damping, gravity, and collision properties required by Gazebo.
+- Model a feeding environment containing a spoon end effector and a bowl.
+- Implement ROS-based joint controllers for continuous arm control.
+- Develop a Gymnasium-style reinforcement-learning environment.
+- Train a deep reinforcement-learning agent to perform reaching, scooping, lifting, and feeding motions.
+- Evaluate digital-twin synchronization and simulation-to-real-world transfer.
