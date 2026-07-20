@@ -1,12 +1,27 @@
-# dofbot-digital-twin-rl
-DOFBOT Robotic Arm: Digital Twin &amp; Deep Reinforcement Learning (DRL)
+# DOFBOT Digital Twin and Deep Reinforcement Learning
 
-This project focuses on building a high-fidelity "Digital Twin" of the Yahboom DOFBOT 6-DOF robotic arm using ROS 2, Gazebo, and RViz. The ultimate goal is to train a DRL agent to perform precise contact manipulation tasks, such as reaching and button pressing, and evaluating sim-to-real transfer.
+## Project Overview
 
-Project Goals:
+This project focuses on developing a digital twin of a customized DOFBOT-style robotic arm using ROS Noetic, RViz, and Gazebo 11.
 
-- Build an accurate, dynamic virtual environment modeling the DOFBOT arm, target tables, and operational objects.
+The robotic arm uses a spoon as its end effector and is being developed for an assistive feeding task. The intended task is for the robot to move the spoon toward a bowl, enter the bowl, simulate scooping, lift the spoon while maintaining a suitable orientation, and move toward a feeding target.
 
-- Implement a Gymnasium-style environment wrapper for continuous joint control.
+The project is inspired by research on digital-twin-driven robotic control using machine vision and deep reinforcement learning. The long-term objective is to create a closed-loop system that combines:
 
-- Apply Deep Reinforcement Learning to optimize precise end-effector reaching and button-pressing objectives.
+- Robot simulation and digital-twin modeling
+- Continuous joint control
+- Environment perception
+- Deep reinforcement learning
+- Simulation-to-real-world transfer
+
+## Project Goals
+- Build an accurate digital model of the robotic arm and its environment.
+- Create a valid URDF model containing the robot links, joints, limits, and coordinate frames.
+- Verify the robot kinematic structure and joint motion in RViz.
+- Transition the robot model from RViz visualization to Gazebo physics simulation.
+- Add mass, inertia, damping, gravity, and collision properties required by Gazebo.
+- Model a feeding environment containing a spoon end effector and a bowl.
+- Implement ROS-based joint controllers for continuous arm control.
+- Develop a Gymnasium-style reinforcement-learning environment.
+- Train a deep reinforcement-learning agent to perform reaching, scooping, lifting, and feeding motions.
+- Evaluate digital-twin synchronization and simulation-to-real-world transfer.
