@@ -1,0 +1,38 @@
+# Milestone 2: Transition from RViz to Gazebo
+
+After validating the robot geometry and kinematic chain in RViz, the model was transferred to Gazebo 11 to introduce physics-based simulation.
+
+RViz is primarily used for robot visualization and transform verification, while Gazebo simulates physical behavior such as gravity, inertia, 
+contact, collision, and joint dynamics.
+
+## Gazebo Integration Work
+
+The following changes were required to make the RViz model operate correctly in Gazebo:
+
+- Created a Gazebo launch file to start the simulator and spawn the URDF model.
+- Added physical properties to the robot links.
+- Added nonzero mass and inertia values for all physical links.
+- Added damping and friction to the revolute joints.
+- Fixed the robot base to the simulation world.
+- Corrected the complete robot orientation relative to the Gazebo ground plane.
+- Adjusted the robot spawn position so the base rests correctly on the ground.
+- Disabled or simplified unstable collision meshes during initial testing.
+- Added simplified collision geometry where physical contact was required.
+- Verified that the robot remains stable under Gazebo physics.
+- Confirmed that the links remain connected and no longer shake under gravity.
+
+## Gazebo Environment
+
+A separate feeding-bowl model was added to the Gazebo environment.
+
+The bowl model was created as a standalone Gazebo model with the following structure:
+
+```text
+feeding_bowl/
+├── model.config
+├── model.sdf
+└── meshes/
+    └── bowl.stl
+
+
+
