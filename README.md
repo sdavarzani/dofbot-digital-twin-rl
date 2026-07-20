@@ -25,3 +25,6 @@ The project is inspired by research on digital-twin-driven robotic control using
 - Develop a Gymnasium-style reinforcement-learning environment.
 - Train a deep reinforcement-learning agent to perform reaching, scooping, lifting, and feeding motions.
 - Evaluate digital-twin synchronization and simulation-to-real-world transfer.
+
+<img width="1920" height="1080" alt="photo_5978823136255872755_w" src="https://github.com/user-attachments/assets/fc419bdc-53bd-4726-afe9-0951715d7c3a" />
+
