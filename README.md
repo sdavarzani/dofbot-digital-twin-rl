@@ -1,12 +1,12 @@
 # dofbot-digital-twin-rl
 # DOFBOT Digital Twin and Deep Reinforcement Learning
+<img width="1920" height="1080" alt="photo_5978823136255872755_w" src="https://github.com/user-attachments/assets/f68dfbd4-b9fa-4952-ab00-6842c87d7aae" />
 
 ## Project Overview
 
 This project focuses on developing a digital twin of a customized DOFBOT-style robotic arm using ROS Noetic, RViz, and Gazebo 11.
 
-The robotic arm uses a spoon as its end effector and is being developed for a<img width="1920" height="1080" alt="photo_5978823136255872755_w" src="https://github.com/user-attachments/assets/f68dfbd4-b9fa-4952-ab00-6842c87d7aae" />
-n assistive feeding task. The intended task is for the robot to move the spoon toward a bowl, enter the bowl, simulate scooping, lift the spoon while maintaining a suitable orientation, and move toward a feeding target.
+The robotic arm uses a spoon as its end effector and is being developed for an assistive feeding task. The intended task is for the robot to move the spoon toward a bowl, enter the bowl, simulate scooping, lift the spoon while maintaining a suitable orientation, and move toward a feeding target.
 
 The project is inspired by research on digital-twin-driven robotic control using machine vision and deep reinforcement learning. The long-term objective is to create a closed-loop system that combines:
 
